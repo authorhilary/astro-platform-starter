@@ -1,21 +1,94 @@
----
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hilary Bee | Portfolio</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Add any custom overrides here */
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
----
-
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+  <!-- Header -->
+  <header class="text-center mb-12 border-4 border-black p-6 rounded-xl max-w-5xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-bold text-pink-600 drop-shadow-lg">Hilary Bee</h1>
+    <p class="mt-2 text-lg">Director of Product | Fraud & Risk | FinTech + SaaS</p>
+    <p class="mt-1 text-md">
+      Cell: (407) 756-3130<br/>
+      <a href="mailto:hilary.heather.bee@gmail.com" class="text-pink-600 hover:underline">hilary.heather.bee@gmail.com</a> | 
+      <a href="https://www.linkedin.com/in/hilaryheatherbee" target="_blank" class="text-pink-600 hover:underline">LinkedIn</a>
     </p>
-</Layout>
+  </header>
+
+  <!-- Intro -->
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <section class="text-center space-y-8">
+      <div class="bg-pink-100 p-6 rounded-2xl shadow-inner">
+        <h2 class="text-2xl font-bold text-pink-600">FROM THE PEOPLE</h2>
+        <ul class="list-disc list-inside max-w-xl mx-auto text-left mt-4 text-black space-y-2">
+          <li>“Incredible customer empathy.”</li>
+          <li>“Diplomatic, yet direct and so effective.”</li>
+          <li>“Incredible ownership.”</li>
+          <li>“A razor-like mind for strategy – Hilary cuts through the crap and gleans the gold faster than anyone I’ve met.”</li>
+        </ul>
+      </div>
+      <div class="bg-pink-100 p-6 rounded-2xl shadow-inner">
+        <h2 class="text-2xl font-bold text-pink-600">IN MY OWN WORDS</h2>
+        <p class="text-lg max-w-xl mx-auto mt-4 text-black">
+          Insatiably curious, relentlessly improving, highly impactful product leader with a flair for solving complex
+          problems. With 12+ years in FinTech, SaaS, and EOR, I’ve launched products that protected billions in revenue,
+          generated triple-digit ROI, and opened tens of millions in ARR—while making both regulators <em>and</em> users happy.
+        </p>
+      </div>
+      <a href="#case-studies" class="inline-block mt-6 px-6 py-3 bg-pink-600 text-white rounded-2xl text-lg shadow-xl hover:bg-pink-500 transition duration-300">
+        View My Work
+      </a>
+    </section>
+
+    <!-- Case Studies Preview -->
+    <section id="case-studies" class="space-y-12">
+      <!-- Wrapbook -->
+      <div class="bg-pink-600 p-6 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
+        <h3 class="text-3xl font-extrabold text-black drop-shadow">Solving AP Fraud at Scale</h3>
+        <p class="mt-2 text-md text-white">Wrapbook | Senior Product Manager II</p>
+        <p class="mt-4 text-white">Designed and launched an in-app AP fraud prevention flow recapturing 7-figure revenue for Disney, Netflix, etc.</p>
+        <a href="/wrapbook-case-study.html" class="mt-4 inline-block text-white font-bold hover:underline">Read Full Case Study</a>
+      </div>
+      <!-- JP Morgan -->
+      <div class="bg-pink-600 p-6 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
+        <h3 class="text-3xl font-extrabold text-black drop-shadow">Rescuing a Failed AVS Launch</h3>
+        <p class="mt-2 text-md text-white">JP Morgan Chase | Vice President</p>
+        <p class="mt-4 text-white">Turned around AVS in under 10 months, unlocking $800B market share and 98% CSAT post-launch.</p>
+        <a href="/jp-morgan-avs-case-study.html" class="mt-4 inline-block text-white font-bold hover:underline">Read Full Case Study</a>
+      </div>
+      <!-- Episode Six -->
+      <div class="bg-pink-600 p-6 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
+        <h3 class="text-3xl font-extrabold text-black drop-shadow">Transforming APIs into a SaaS Platform</h3>
+        <p class="mt-2 text-md text-white">Episode Six | Product Manager</p>
+        <p class="mt-4 text-white">Defined and launched a UX-first SaaS layer atop core APIs, driving a $200M+ pipeline boost.</p>
+        <a href="/episode-six-case-study.html" class="mt-4 inline-block text-white font-bold hover:underline">Read Full Case Study</a>
+      </div>
+    </section>
+
+    <!-- Resources & Footer -->
+    <section class="mt-20 space-y-4 text-center">
+      <h2 class="text-2xl font-bold text-black drop-shadow">Resources</h2>
+      <ul class="list-disc list-inside text-lg space-y-2">
+        <li><a href="/HilaryBee_Resume_2025.pdf" class="text-pink-600 hover:underline" download>Download My Resume (PDF)</a></li>
+        <li><a href="https://www.wrapbook.com/blog/financial-fraud-in-focus-protecting-production-budgets" class="text-pink-600 hover:underline" target="_blank">Whitepaper: Protecting Production Budgets</a></li>
+        <li><a href="https://www.jpmorgan.com/content/dam/jpmorgan/documents/cb/cb-check-fraud-playbook.pdf" class="text-pink-600 hover:underline" target="_blank">Whitepaper: Check Fraud Playbook</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-20 text-center text-sm text-black mb-6">
+    <p>Let's talk fraud, product, or “I Love Lucy” reruns.</p>
+    <p>Email: hilary.heather.bee@gmail.com | <a href="https://www.linkedin.com/in/hilaryheatherbee" class="text-pink-600 hover:underline">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>
+
